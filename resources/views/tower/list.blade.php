@@ -14,7 +14,7 @@
 
 <br>
 
- <a href="{{ route('tower.create') }}">
+ <a href="{{route('tower.create') }}">
  	<button class="btn btn-primary" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambah</button>
  </a>
 

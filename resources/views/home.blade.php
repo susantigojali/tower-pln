@@ -73,7 +73,7 @@
 
                 <div class="links">
                     <a href="{{ url('tower') }}">Tower</a>
-                    <a href="{{ url('map') }}">Map</a>
+                    <a href="{{ url('tower/map') }}">Map</a>
                     <a href="{{ url('team') }}">Team</a>
                 </div>
             </div>

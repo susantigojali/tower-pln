@@ -12,15 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 //Route::model('tower', 'App\Model\Tower');
 
+//CRUD
 Route::get('tower/create', ['as' => 'tower.create', 'uses' => 'TowerController@create']);
 Route::post('tower', ['as' => 'tower.store', 'uses' => 'TowerController@store']);
 Route::get('tower', ['as' => 'tower.index', 'uses' => 'TowerController@index']);
-//Route::get('tower/{tower}', ['as' => 'tower.show', 'uses' => 'TowerController@show']);
 Route::get('tower/{tower}/edit', ['as' => 'tower.edit', 'uses' => 'TowerController@edit']);
 Route::put('tower/{tower}', ['as' => 'tower.update', 'uses' => 'TowerController@update']);
 Route::get('tower/{tower}/delete', ['as' => 'tower.get_destroy', 'uses' => 'TowerController@destroy']);
+
+//show map
+Route::get('tower/map', ['as' => 'tower.showMap', 'uses' => 'TowerController@showMap']);
+
+Route::get('team', ['as' => 'team', 'uses' => 'TeamController@team']);

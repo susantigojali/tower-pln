@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Tower;
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateTowerRequest;
 
 class TowerController extends Controller
 {
@@ -46,7 +47,7 @@ class TowerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateTowerRequest $request)
     {
         $this->tower->create($request->all());
         return redirect()->route('tower.index');
@@ -102,6 +103,18 @@ class TowerController extends Controller
         return $request;
         $tower->delete();
         return redirect()->route('tower.index');
+        
+    }
+
+
+    /**
+     * Show the tower in map
+     * @return \Illuminate\Http\Response
+     */
+    public function showMap()
+    {
+        $towers = $this->tower->get();
+        return view('tower.show_map', compact('towers'));
         
     }
 }
