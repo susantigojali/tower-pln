@@ -21,14 +21,20 @@ class TowerController extends Controller
      */
     public function index(Request $request)
     {
+        $towers; 
         if ($request->name) {
             $towers = $this->tower->where('name', 'like', '%'.$request->name.'%')->get();
             
         } else {
             $towers = $this->tower->get();
         }
+
+        if ($request->ajax()) {
+            return response()->json($towers);
+        } else {
+            return view('tower.list', compact('towers'));
+        }
         
-        return view('tower.list', compact('towers'));
     }
 
     /**
@@ -85,7 +91,7 @@ class TowerController extends Controller
      * @param  \App\Model\Tower  $tower
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tower $tower)
+    public function update(CreateTowerRequest $request, Tower $tower)
     {
         $tower->fill($request->all())->save();
         
@@ -114,6 +120,7 @@ class TowerController extends Controller
     public function showMap()
     {
         $towers = $this->tower->get();
+        //return $towers;
         return view('tower.show_map', compact('towers'));
         
     }
