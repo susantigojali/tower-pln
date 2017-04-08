@@ -6,7 +6,6 @@
 	<link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet" />
 	<link href="{{ url('css/bootstrap-theme.min.css') }}" rel="stylesheet" />
 	<script type="text/javascript" src="{{ url('js/bootstrap.min.js') }}"></script>
-	<script type="text/javascript" src="{{ url('js/jquery-2.1.3.min.js') }}"></script> 
 </head>
 <body>
 	<div class="container">

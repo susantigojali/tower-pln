@@ -7,11 +7,9 @@
 
         <title>Tower PLN</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet" />
         <link href="{{ url('css/bootstrap-theme.min.css') }}" rel="stylesheet" />
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+        <script type="text/javascript" src="{{ url('js/jquery.min.js') }}"></script> 
 
         <!-- Styles -->
         <style>
