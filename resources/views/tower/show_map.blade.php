@@ -7,16 +7,17 @@
 
         <title>Tower PLN</title>
 
-        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet" />
+        <link href="{{ url('css/bootstrap-theme.min.css') }}" rel="stylesheet" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -47,35 +48,48 @@
             }
 
             .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
+                font-size: 50px;
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref">
-            <div class="content">
-                <div class="title m-b-md">
-                    TOWER PLN
-                    <img height="70" width="50" src="{{ url('img/logo-pln.jpg') }}" alt="logo-pln" /> 
+        <div class="container">
+            <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="logo" src="{{ url('img/logo-pln.jpg') }}" height="20" width="20">
+                    </a>
+                    <a class="navbar-brand" href="#">PLN</a>
                 </div>
-               </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{route('tower.index')}}">Tower</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{route('tower.showMap')}}">Map</a></li>
+                    </ul>
+                </div>
             </div>
-            <div id="map" style="width:100%;height:500px;"></div>
+            </nav>
+            <div class="flex-center position-ref">
+                <div class="content">
+                    <div class="title m-b-md">
+                        TOWER MAP 
+                    </div>
+                   </div>
+                </div>
+                <div id="map" style="width:100%;height:430px;"></div>
+            </div>
         </div>
+        
     </body>
 <script>
 function initMap() {

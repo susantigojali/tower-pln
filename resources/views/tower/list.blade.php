@@ -1,7 +1,7 @@
 @extends ('tower-map')
 
 @section('main-page')
-<h3>Tower List</h3>
+<h4>Tower List</h4>
 
 <form method="get">
 <div class="input-group">
@@ -15,7 +15,7 @@
 <br>
 
  <a href="{{route('tower.create') }}">
- 	<button class="btn btn-primary" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambah</button>
+ 	<button class="btn btn-primary" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button>
  </a>
 
 

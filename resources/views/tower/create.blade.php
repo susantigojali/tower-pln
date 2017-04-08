@@ -1,7 +1,7 @@
 @extends ('tower-map')
 
 @section ('main-page')
-<h1>Tambah Tower</h1>
+<h3>Add Tower</h3>
 
 {!! Form::open(['route' => 'tower.store', 'class' => 'form-horizontal']) !!}
 
